@@ -1,0 +1,11 @@
+reset;
+
+model modelDual.mod;
+data input.dat;
+
+option solver cplex;
+
+problem SVM_DUAL: l,dual_svm,Constraint_1,Constraint_2,Constraint_3;
+solve SVM_DUAL;
+
+display l;

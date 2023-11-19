@@ -1,0 +1,11 @@
+reset;
+
+model model.mod;
+data input.dat;
+option solver cplex;
+
+problem SVM_PRIMAL: w,g,s,primal_svm,Constraint_1,Constraint_2;
+
+solve SVM_PRIMAL;
+
+display w, g, s;
